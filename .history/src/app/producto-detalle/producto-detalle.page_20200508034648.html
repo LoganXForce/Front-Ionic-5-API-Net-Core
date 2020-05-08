@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalles del Producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{producto.nombre}}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      {{producto.descripcion}}
+      <p><strong>Proveedor:</strong> {{producto.proveedor.nombreProveedor}} </p>
+      <p><strong>Cantidad en Stock:</strong>{{producto.cantidad}}</p>
+      <p><strong>Precio por Unidad:</strong> {{producto.precio}}</p>
+      <p><strong>Codigo de Entrada:</strong> {{producto.codigoEntrada}}</p>
+      <p><strong>Fecha de Entrada:</strong> {{producto.fechaEntrada | date}}</p>
+      <p><strong>Domicilio del Proveedor:</strong> {{producto.proveedor.domicilio}}</p>
+      <p><strong>Pais de Procedencia:</strong> {{producto.proveedor.paisProcedencia}}</p>
+      <p><strong>Sucursal de Procedencia:</strong> {{producto.proveedor.sucursal}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

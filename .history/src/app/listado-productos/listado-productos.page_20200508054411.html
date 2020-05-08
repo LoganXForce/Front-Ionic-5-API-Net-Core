@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Lista de Productos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-card *ngFor="let producto of productos; let indice = index" >
+    <ion-card-header>
+      <ion-card-title (click)="irADetalle(producto)">{{producto.nombre}}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content (click)="irADetalle(producto)">
+      {{producto.descripcion}}
+      <p><strong>Proveedor:</strong> {{producto.proveedor.nombreProveedor}} </p>
+    </ion-card-content>
+    <ion-button color="danger" fill="clear" (click)="eliminarProducto(producto.productoID, indice)">Eliminar</ion-button>
+  </ion-card>
+
+
+</ion-content>

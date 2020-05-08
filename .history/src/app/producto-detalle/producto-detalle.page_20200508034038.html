@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalles del Producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{producto.nombre}}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <p><strong>Cantidad:</strong>{{producto.cantidad}}</p>
+      <p><strong>Precio:</strong> {{producto.precio}}</p>
+      <p><strong>CodigoEntrada:</strong> {{producto.codigoEntrada}}</p>
+      <p><strong>FechaEntrada:</strong> {{producto.fechaEntrada | date}}</p>
+      <p><strong>ProveedorID:</strong> {{producto.proveedorID}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
