@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Agregar Nuevo Producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+  <ion-item>
+    <ion-label position="floating">Nombre del Producto</ion-label>
+  <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Descripcion del Producto</ion-label>
+    <ion-textarea></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Cantidad del Stock</ion-label>
+  <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Precio por Unidad</ion-label>
+    <ion-input type="number" position="fixed">$</ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Codigo de Entrada</ion-label>
+  <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Fecha de Almacenaje</ion-label>
+    <ion-datetime displayFormat="DDDD MMM D, YYYY" min="2005" max="2016" value="2008-09-02"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Proveedores</ion-label>
+    <ion-select placeholder="Selecciona el Proveedor" interface="popover">
+      <ion-select-option *ngFor="let proveedor of proveedores" value="f">{{proveedor.nombreProveedor}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-button expand="block">Guardar</ion-button>
+  </ion-list>
+
+</ion-content>
